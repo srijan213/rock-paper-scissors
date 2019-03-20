@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+        <!-- LINKS -->
+        <link rel="stylesheet" href="./sass/style.css" />
+        <title>Rock Paper Scissors Game</title>
+    </head>
+
+    <body>
+        <header>Rock Paper Scissors</header>
+        <div class="container">
+            <div class="scoreboard">
+                <div class="badge" id="user--badge">user</div>
+                <div class="badge" id="computer--badge">comp</div>
+                <div class="score">
+                    <span id="user--score">0</span>
+                    <span id="score--colon">:</span>
+                    <span id="computer--score">0</span>
+                </div>
+            </div>
+
+            <div class="output--message">Paper Covers Rock. You Win!</div>
+            <div class="game--icons">
+                <img src="./assets/images/rock.png" alt="Rock Icon"
+                    id="rock--icon" />
+                <img
+                    src="./assets/images/paper.png"
+                    alt="Paper Icon"
+                    id="paper--icon"
+                    />
+                <img
+                    src="./assets/images/scissors.png"
+                    alt="Scissors Icon"
+                    id="scissors--icon"
+                    />
+            </div>
+            <div class="instruction--message">Make You Move</div>
+        </div>
+        <script type="text/javascript" src="./javascript/app.js"></script>
+    </body>
+</html>
