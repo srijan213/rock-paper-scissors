@@ -7,6 +7,17 @@ const paper_img = document.getElementById("paper--icon");
 const scissors_img = document.getElementById("scissors--icon");
 const outputMessage_div = document.getElementById("output--message");
 
+// VARIABLES
+let userScore = 0;
+let computerScore = 0;
+let userInput = "";
+let computerInput = "";
+
+function computerInputGenerator() {
+  computerInput = Math.floor(Math.random() * 3);
+  return computerInput;
+}
+
 // EVENTLISTENERS
 
 rock_img.addEventListener("click", function() {
