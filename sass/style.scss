@@ -77,6 +77,11 @@ header {
       border-radius: 50%;
       margin: 1rem;
       padding: 0.5rem;
+      &:hover {
+        cursor: pointer;
+        background: $sluggish-red;
+        transition: ease 0.25s;
+      }
     }
   } // end game--icons
 
