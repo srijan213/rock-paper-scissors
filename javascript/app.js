@@ -68,6 +68,14 @@ function outputChoices(message) {
 function output(outputMessage) {
   outputMessage_div.innerHTML = outputMessage;
 }
+
+function reset() {
+  if (confirm("Are you sure you want to reset")) {
+    userScore = 0;
+    computerScore = 0;
+    outputScore();
+  }
+}
 // EVENTLISTENERS
 
 rock_img.addEventListener("click", function() {
@@ -85,10 +93,4 @@ scissors_img.addEventListener("click", function() {
   resultCalculator(userInput, computerInputGenerator());
 });
 
-reset_button.addEventListener("click", function() {
-  if (confirm("Are you sure you want to reset")) {
-    userScore = 0;
-    computerScore = 0;
-    outputScore();
-  }
-});
+reset_button.addEventListener("click", reset);
