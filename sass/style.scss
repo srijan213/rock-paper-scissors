@@ -67,6 +67,12 @@ header {
     margin: 1rem;
   }
 
+  .choices {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1rem;
+  }
+
   .game--icons {
     display: flex;
     justify-content: center;
@@ -89,5 +95,20 @@ header {
     font-size: 1.2rem;
     text-align: center;
     margin: 0.5rem;
+  }
+
+  #reset--button {
+    background: $dark-blue;
+    color: white;
+    padding: 0.3rem 0.7rem;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    display: block;
+    margin: 1rem auto;
+    &:hover {
+      cursor: pointer;
+      background: $sluggish-red;
+      transition: ease 0.25s;
+    }
   }
 } //end container
