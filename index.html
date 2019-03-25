@@ -1,50 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-        <!-- LINKS -->
-        <link rel="stylesheet" href="./sass/style.css" />
-        <title>Rock Paper Scissors Game</title>
-    </head>
+    <!-- LINKS -->
+    <link rel="stylesheet" href="./sass/style.css" />
+    <title>Rock Paper Scissors Game</title>
+  </head>
 
-    <body>
-        <header>Rock Paper Scissors</header>
-        <div class="container">
-            <div class="scoreboard">
-                <div class="badge" id="user--badge">user</div>
-                <div class="badge" id="computer--badge">comp</div>
-                <div class="score">
-                    <span id="user--score">0</span>
-                    <span id="score--colon">:</span>
-                    <span id="computer--score">0</span>
-                </div>
-            </div>
-            <div class="choices" id="choices">USER: n/a -|- COMPUTER: n/a</div>
-            <div class="output--message" id='output--message'>
-                BE WISE. DON'T BE NERVOUS</div>
-            <div class="game--icons">
-                <img
-                    src="./assets/images/rock.png"
-                    alt="Rock Icon"
-                    id="rock--icon" />
-                <img
-                    src="./assets/images/paper.png"
-                    alt="Paper Icon"
-                    id="paper--icon"
-                    />
-                <img
-                    src="./assets/images/scissors.png"
-                    alt="Scissors Icon"
-                    id="scissors--icon"
-                    />
-
-            </div>
-            <div class="instruction--message">Make Your Move</div>
-            <button id="reset--button">Reset</button>
-        </div><!--  end container -->
-        <script type="text/javascript" src="./javascript/app.js"></script>
-    </body>
+  <body>
+    <header>Rock Paper Scissors</header>
+    <div class="container">
+      <div class="scoreboard">
+        <div class="badge" id="user--badge">user</div>
+        <div class="badge" id="computer--badge">comp</div>
+        <div class="score">
+          <span id="user--score">0</span>
+          <span id="score--colon">:</span>
+          <span id="computer--score">0</span>
+        </div>
+      </div>
+      <div class="choices" id="choices">USER: n/a -|- COMPUTER: n/a</div>
+      <div class="output--message" id="output--message">
+        BE WISE. DON'T BE NERVOUS
+      </div>
+      <div class="game--icons">
+        <img src="./assets/images/rock.png" alt="Rock Icon" id="rock--icon" />
+        <img
+          src="./assets/images/paper.png"
+          alt="Paper Icon"
+          id="paper--icon"
+        />
+        <img
+          src="./assets/images/scissors.png"
+          alt="Scissors Icon"
+          id="scissors--icon"
+        />
+      </div>
+      <div class="instruction--message">Make Your Move</div>
+      <button id="reset--button">Reset</button>
+    </div>
+    <!--  end container -->
+    <!-- ADDING JQUERY -->
+    <script
+      src="http://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./javascript/app-jq.js"></script>
+    <!-- END JAVASCRIPT -->
+    <!-- UNCOMMENT BELOW TO USE THE APP WITH JUST JAVASCRIPT AND COMMENT OUT THE JQUERY PART-->
+    <!-- <script type="text/javascript" src="./javascript/app.js"></script> -->
+  </body>
 </html>
