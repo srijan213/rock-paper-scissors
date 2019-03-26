@@ -13,32 +13,34 @@ $(document).ready(function() {
   function scoreHandler(userWon) {
     if (userWon) userScore += 1;
     else computerScore += 1;
-    $("#user--score").html(userScore);
-    $("#computer--score").html(computerScore);
+
+    //sliding score counter 
+    if(userScore > $("#user--score").html())
+      $("#user--score").hide().html(userScore).slideDown();
+    if(computerScore > $("#user--score").html())
+      $("#computer--score").hide().html(computerScore).slideDown();
   }
 
   function resultCalculator(userChoice, computerChoice) {
-    let userWon = false;
+    let userWon = false, outputMessage = "";
     if (userChoice === computerChoice)
-      $("#output--message").html(`IT'S A DRAW`);
+      outputMessage = "IT'S A DRAW"
     else {
       if (
         (userChoice === choices[0] && computerChoice === choices[1]) ||
         (userChoice === choices[1] && computerChoice === choices[2]) ||
         (userChoice === choices[2] && computerChoice === choices[0])
       )
-        $("#output--message").html(
-          `YOU LOST !!! ${computerChoice} beats ${userChoice}`
-        );
+      outputMessage = `YOU LOST !!! ${computerChoice} beats ${userChoice}`;
       else {
-        $("#output--message").html(
-          `YOU WIN !!! ${userChoice} beats ${computerChoice}`
-        );
+        outputMessage = `YOU WIN !!! ${userChoice} beats ${computerChoice}`;
         userWon = true;
       }
       $("#choices").html(`USER: ${userChoice} -|- COMPUTER: ${computerChoice}`);
       scoreHandler(userWon);
     }
+    // touch #output-message element just once with us of variables
+    $("#output--message").html(outputMessage);
   }
 
   function reset() {
